@@ -8,77 +8,56 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="Home" />
+        <item
+            android:id="@+id/nav_my_accounts"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="My Accounts" />
+
     </group>
 
-    <item android:title="Rekening">
+    <item android:title="TRANSACTIONS">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_saldo"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="Informasi Saldo" />
+                    android:id="@+id/nav_transfer"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Transfer" />
                 <item
-                    android:id="@+id/nav_mutasi"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="Mutasi Rekening" />
+                    android:id="@+id/nav_bill_payment"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Bill Payment" />
+                <item
+                    android:id="@+id/nav_topup"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Top Up" />
             </group>
         </menu>
     </item>
-    <item android:title="Transfer">
+    <item android:title="TOOLS">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_antar_rekening"
+                    android:id="@+id/nav_notifications"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="Antar Rekening Bank" />
+                    android:title="Notifications" />
                 <item
-                    android:id="@+id/nav_antar_bank"
+                    android:id="@+id/nav_settings"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Online Antar Bank" />
-                <item
-                    android:id="@+id/nav_kliring"
-                    android:icon="@drawable/ic_menu_manage"
-                    android:title="Kliring" />
-                <item
-                    android:id="@+id/nav_rtgs"
-                    android:icon="@drawable/ic_menu_manage"
-                    android:title="RTGS" />
+                    android:title="Settings" />
             </group>
         </menu>
     </item>
-    <item android:title="Pembelian">
+    <item android:title="RESOURCES">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_voucher_prabayar"
+                    android:id="@+id/nav_faq"
                     android:icon="@drawable/ic_menu_gallery"
-                    android:title="Voucher Prabayar" />
+                    android:title="FAQ" />
                 <item
-                    android:id="@+id/nav_gopay"
+                    android:id="@+id/nav_contact_us"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="GO-PAY" />
-                <item
-                    android:id="@+id/nav_pln_prabayar"
-                    android:icon="@drawable/ic_menu_manage"
-                    android:title="PLN Prabayar" />
-            </group>
-        </menu>
-    </item>
-    <item android:title="Pembayaran">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_kartu_kredit"
-                    android:icon="@drawable/ic_menu_gallery"
-                    android:title="Kartu Kredit" />
-                <item
-                    android:id="@+id/nav_telpon_pascabayar"
-                    android:icon="@drawable/ic_menu_slideshow"
-                    android:title="Telepon/Seluler Pascabayar" />
-                <item
-                    android:id="@+id/nav_pln_pascabayar"
-                    android:icon="@drawable/ic_menu_manage"
-                    android:title="PLN Pascabayar" />
+                    android:title="Contact Us" />
             </group>
         </menu>
     </item>

@@ -2,6 +2,7 @@ package com.zidi.teramockupmobile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -77,39 +78,40 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
-        } else if (id == R.id.nav_saldo) {
-            Intent saldoIntent = new Intent(MainActivity.this, SaldoActivity.class);
-            startActivity(saldoIntent);
-        } else if (id == R.id.nav_mutasi) {
-
-        } else if (id == R.id.nav_antar_rekening) {
-
-        } else if (id == R.id.nav_antar_bank) {
-
-        } else if (id == R.id.nav_kliring) {
-
-        } else if (id == R.id.nav_rtgs) {
-
-        } else if (id == R.id.nav_voucher_prabayar) {
-
-        } else if (id == R.id.nav_gopay) {
-
-        } else if (id == R.id.nav_pln_prabayar) {
-
-        } else if (id == R.id.nav_kartu_kredit) {
-
-        } else if (id == R.id.nav_telpon_pascabayar) {
-
-        } else if (id == R.id.nav_pln_pascabayar) {
-
+            Snackbar.make(findViewById(R.id.main_activity), "Home's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_my_accounts) {
+            Snackbar.make(findViewById(R.id.main_activity), "My Account's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_transfer) {
+            Intent transferIntent = new Intent(MainActivity.this, TransferActivity.class);
+            startActivity(transferIntent);
+        } else if (id == R.id.nav_bill_payment) {
+            Snackbar.make(findViewById(R.id.main_activity), "Bill Payment's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_topup) {
+            Snackbar.make(findViewById(R.id.main_activity), "Topup's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_notifications) {
+            Snackbar.make(findViewById(R.id.main_activity), "Notifications's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_settings) {
+            Snackbar.make(findViewById(R.id.main_activity), "Settings's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_faq) {
+            Snackbar.make(findViewById(R.id.main_activity), "FAQ's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        } else if (id == R.id.nav_contact_us) {
+            Snackbar.make(findViewById(R.id.main_activity), "Contact Us's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         } else if (id == R.id.nav_logout) {
-
+            Snackbar.make(findViewById(R.id.main_activity), "Logout's Action not defined yet", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

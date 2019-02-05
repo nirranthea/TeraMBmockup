@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+    </group>
+
+    <item android:title="Rekening">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_saldo"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Informasi Saldo" />
+                <item
+                    android:id="@+id/nav_mutasi"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Mutasi Rekening" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Transfer">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_antar_rekening"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Antar Rekening Bank" />
+                <item
+                    android:id="@+id/nav_antar_bank"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Online Antar Bank" />
+                <item
+                    android:id="@+id/nav_kliring"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Kliring" />
+                <item
+                    android:id="@+id/nav_rtgs"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="RTGS" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Pembelian">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_voucher_prabayar"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Voucher Prabayar" />
+                <item
+                    android:id="@+id/nav_gopay"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="GO-PAY" />
+                <item
+                    android:id="@+id/nav_pln_prabayar"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="PLN Prabayar" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Pembayaran">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_kartu_kredit"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Kartu Kredit" />
+                <item
+                    android:id="@+id/nav_telpon_pascabayar"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Telepon/Seluler Pascabayar" />
+                <item
+                    android:id="@+id/nav_pln_pascabayar"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="PLN Pascabayar" />
+            </group>
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

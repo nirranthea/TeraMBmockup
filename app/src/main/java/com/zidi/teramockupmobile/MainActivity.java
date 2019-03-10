@@ -14,9 +14,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+    private ImageView
+            menuMyAccount, menuTransfer, menuBillPayment, menuTopUp, menuSetting, menuContactUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +28,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,6 +37,19 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        menuMyAccount   = (ImageView) findViewById(R.id.iv_menu1);
+        menuTransfer    = (ImageView) findViewById(R.id.iv_menu2);
+        menuBillPayment = (ImageView) findViewById(R.id.iv_menu3);
+        menuTopUp       = (ImageView) findViewById(R.id.iv_menu4);
+        menuSetting     = (ImageView) findViewById(R.id.iv_menu5);
+        menuContactUs   = (ImageView) findViewById(R.id.iv_menu6);
+        menuMyAccount.setOnClickListener(this);
+        menuTransfer.setOnClickListener(this);
+        menuBillPayment.setOnClickListener(this);
+        menuTopUp.setOnClickListener(this);
+        menuSetting.setOnClickListener(this);
+        menuContactUs.setOnClickListener(this);
     }
 
     @Override
@@ -86,8 +94,8 @@ public class MainActivity extends AppCompatActivity
             Snackbar.make(findViewById(R.id.main_activity), "Home's Action not defined yet", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         } else if (id == R.id.nav_my_accounts) {
-            Snackbar.make(findViewById(R.id.main_activity), "My Account's Action not defined yet", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+            Intent myAccountIntent = new Intent(MainActivity.this, MyAccountActivity.class);
+            startActivity(myAccountIntent);
         } else if (id == R.id.nav_transfer) {
             Intent transferIntent = new Intent(MainActivity.this, TransferActivity.class);
             startActivity(transferIntent);
@@ -117,5 +125,27 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.iv_menu1:
+                Intent myAccountIntent = new Intent(MainActivity.this, MyAccountActivity.class);
+                startActivity(myAccountIntent);
+                break;
+            case R.id.iv_menu2:
+                Intent transferIntent = new Intent(MainActivity.this, TransferActivity.class);
+                startActivity(transferIntent);
+                break;
+            case R.id.iv_menu3:
+                break;
+            case R.id.iv_menu4:
+                break;
+            case R.id.iv_menu5:
+                break;
+            case R.id.iv_menu6:
+                break;
+        }
     }
 }

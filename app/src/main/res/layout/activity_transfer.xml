@@ -3,84 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".TransferActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
-        android:layout_marginBottom="4dp"
-        android:text="TABUNGAN DAN GIRO"/>
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        app:cardElevation="2dp">
-        <RelativeLayout
+        <!--HEADER IMAGE-->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp">
-            <TextView
-                android:id="@+id/tv_nama_cif1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="AGUS DENI PURNAMA"/>
-            <TextView
-                android:id="@+id/tv_no_rekening1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_nama_cif1"
-                android:text="0010301123456"/>
-            <TextView
-                android:id="@+id/tv_saldo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_no_rekening1"
-                android:layout_alignParentEnd="true"
-                android:textStyle="bold"
-                android:text="Rp 3.000.000,-"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+            android:layout_marginBottom="32dp">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        app:cardElevation="2dp">
-        <RelativeLayout
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/teradata1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#96000000"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="TRANSFER"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_listmenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp">
-            <TextView
-                android:id="@+id/tv_nama_cif2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="AGUS DENI PURNAMA"/>
-            <TextView
-                android:id="@+id/tv_no_rekening2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_nama_cif2"
-                android:text="0010001123456"/>
-            <TextView
-                android:id="@+id/tv_saldo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_no_rekening2"
-                android:layout_alignParentEnd="true"
-                android:textStyle="bold"
-                android:text="Rp 5.000.000,-"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_listmenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:scrollbars="vertical"/>
+
 </LinearLayout>
